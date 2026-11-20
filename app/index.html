@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA 6 Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <h1>Leonida Ledger</h1>
+    <p class="tagline">All 55 PlayStation 5 trophies for GTA 6 — cited guides, a platinum
+    roadmap and every missable flagged. Fully offline: progress stays in your browser.</p>
+  </div>
+  <div class="progress-card" aria-label="Overall progress">
+    <div class="progress-big"><span id="earned-count">0</span><span class="progress-of"> / 55 earned</span></div>
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+    <div class="progress-pct" id="progress-pct">0% complete</div>
+    <ul class="grade-counts" id="grade-counts"></ul>
+  </div>
+</header>
+
+<nav class="view-tabs" aria-label="Guide views">
+  <button type="button" class="tab is-active" data-view="tracker">Tracker</button>
+  <button type="button" class="tab" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-view="missables">Missables</button>
+</nav>
+
+<section id="view-tracker" class="view">
+  <div class="toolbar">
+    <label class="search-label">Search
+      <input id="search" type="search" placeholder="Search trophy name or description…">
+    </label>
+    <label>Kind
+      <select id="filter-kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="missable">Missable</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="activities">Activities</option>
+        <option value="online">Online</option>
+      </select>
+    </label>
+    <label>Grade
+      <select id="filter-grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label>Status
+      <select id="filter-status">
+        <option value="all">All</option>
+        <option value="earned">Earned</option>
+        <option value="unearned">Not yet earned</option>
+      </select>
+    </label>
+    <label class="spoiler-toggle">
+      <input type="checkbox" id="spoiler-toggle">
+      Spoiler shield: mask story trophies
+    </label>
+    <button id="export-btn" type="button">Export progress</button>
+    <label class="import-label">Import progress
+      <input id="import-file" type="file" accept="application/json,.json">
+    </label>
+  </div>
+
+  <div class="tracker-layout">
+    <div class="tracker-main">
+      <aside id="next-up" class="next-up" aria-label="Next up"></aside>
+      <p id="list-summary" class="list-summary"></p>
+      <ul id="trophy-list" class="trophy-list"></ul>
+    </div>
+    <aside id="guide-pane" class="guide-pane" aria-label="Trophy guide"></aside>
+  </div>
+</section>
+
+<section id="view-roadmap" class="view" hidden>
+  <h2>Roadmap to the Platinum</h2>
+  <p class="view-intro">Five stages, in the order the game lets you earn them: the story first,
+  the missables before their points of no return, then collections, then the activity grind,
+  and finally 100% completion and the platinum itself. Stage progress is driven by your checklist.</p>
+  <div id="roadmap-stages"></div>
+</section>
+
+<section id="view-missables" class="view" hidden>
+  <h2>Missable Trophies</h2>
+  <p class="view-intro">Every trophy that can be lost on a single playthrough, with the reason —
+  drawn from its official description — and what to do before the door closes. Everything not
+  listed here can be cleaned up after the story.</p>
+  <div id="missable-list"></div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
